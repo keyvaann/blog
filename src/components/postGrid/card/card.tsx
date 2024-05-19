@@ -1,53 +1,87 @@
 import React from "react"
 
-import styled from "styled-components"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
+import {
   faInstagram,
   faTelegram,
   faTwitter,
   faWikipediaW,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
+import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import styled from "styled-components"
 
 import Category from "~/src/styles/category"
-import DateTime from "~/src/styles/dateTime"
+// import DateTime from "~/src/styles/dateTime"
 import type Post from "~/src/types/Post"
 
-import CenteredImg from "./centeredImg"
+// import CenteredImg from "./centeredImg"
 
 type CardProperties = Pick<
   Post,
-  "alt" | "category" | "title" | "instagram" | "telegram" | "twitter" | "website" | "wikipedia" | "youtube" | "desc" | "date"
+  | "alt"
+  | "category"
+  | "title"
+  | "instagram"
+  | "telegram"
+  | "twitter"
+  | "website"
+  | "wikipedia"
+  | "youtube"
+  | "desc"
+  | "date"
 >
 
 const Card: React.FC<CardProperties> = ({
-  alt,
+  // alt,
   category,
   title,
-  instagram, 
-  telegram, 
-  twitter, 
-  website, 
-  wikipedia, 
+  instagram,
+  telegram,
+  twitter,
+  website,
+  wikipedia,
   youtube,
   desc,
-  date,
+  // date,
 }) => {
   return (
     <Wrapper>
       <Text>
         <div>
           <Title>{title}</Title>
-          {instagram && <LinkTo href={instagram} target="_blank"><FontAwesomeIcon icon={faInstagram} /></LinkTo> }
-          {telegram && <LinkTo href={telegram} target="_blank"><FontAwesomeIcon icon={faTelegram} /></LinkTo> }
-          {twitter && <LinkTo href={twitter} target="_blank"><FontAwesomeIcon icon={faTwitter} /></LinkTo> }
-          {website && <LinkTo href={website} target="_blank"><FontAwesomeIcon icon={faGlobe} /></LinkTo> }
-          {wikipedia && <LinkTo href={wikipedia} target="_blank"><FontAwesomeIcon icon={faWikipediaW} /></LinkTo> }
-          {youtube && <LinkTo href={youtube} target="_blank"><FontAwesomeIcon icon={faYoutube} /></LinkTo> }          
+          {instagram && (
+            <LinkTo href={instagram} target="_blank">
+              <FontAwesomeIcon icon={faInstagram} />
+            </LinkTo>
+          )}
+          {telegram && (
+            <LinkTo href={telegram} target="_blank">
+              <FontAwesomeIcon icon={faTelegram} />
+            </LinkTo>
+          )}
+          {twitter && (
+            <LinkTo href={twitter} target="_blank">
+              <FontAwesomeIcon icon={faTwitter} />
+            </LinkTo>
+          )}
+          {website && (
+            <LinkTo href={website} target="_blank">
+              <FontAwesomeIcon icon={faGlobe} />
+            </LinkTo>
+          )}
+          {wikipedia && (
+            <LinkTo href={wikipedia} target="_blank">
+              <FontAwesomeIcon icon={faWikipediaW} />
+            </LinkTo>
+          )}
+          {youtube && (
+            <LinkTo href={youtube} target="_blank">
+              <FontAwesomeIcon icon={faYoutube} />
+            </LinkTo>
+          )}
           <Category>{category}</Category>
           <Desc>{desc}</Desc>
         </div>

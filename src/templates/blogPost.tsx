@@ -14,7 +14,18 @@ import { rhythm } from "~/src/styles/typography"
 const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark!
-  const { title, instagram, telegram, twitter, website, wikipedia, youtube, desc, date, category } = frontmatter!
+  const {
+    title,
+    // instagram,
+    // telegram,
+    // twitter,
+    // website,
+    // wikipedia,
+    // youtube,
+    desc,
+    date,
+    category,
+  } = frontmatter!
 
   // const ogImagePath =
   //   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access

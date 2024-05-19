@@ -28,7 +28,19 @@ const Home = ({
     for (const { node } of filteredPostData) {
       const { id, fields, frontmatter } = node
       const { slug } = fields!
-      const { title, instagram, telegram, twitter, website, wikipedia, youtube, desc, date, category, alt } = frontmatter!
+      const {
+        title,
+        instagram,
+        telegram,
+        twitter,
+        website,
+        wikipedia,
+        youtube,
+        desc,
+        date,
+        category,
+        alt,
+      } = frontmatter!
       // const { childImageSharp } = thumbnail!
 
       setPosts(previousPost => [
@@ -37,11 +49,11 @@ const Home = ({
           id,
           slug,
           title,
-          instagram, 
-          telegram, 
-          twitter, 
-          website, 
-          wikipedia, 
+          instagram,
+          telegram,
+          twitter,
+          website,
+          wikipedia,
           youtube,
           desc,
           date,
@@ -118,11 +130,11 @@ export const query = graphql`
           id
           frontmatter {
             title
-            instagram 
-            telegram 
-            twitter 
+            instagram
+            telegram
+            twitter
             website
-            wikipedia 
+            wikipedia
             youtube
             category
             date(formatString: "YYYY-MM-DD")

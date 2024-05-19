@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import styled from "styled-components"
 
 import type Post from "~/src/types/Post"
@@ -24,23 +24,37 @@ const PostGrid: React.FC<PostGridProperties> = ({ posts }) => {
   return (
     <Grid role="list">
       {currentList.map(data => {
-        const { id, slug, title, instagram, telegram, twitter, website, wikipedia, youtube, desc, date, category, alt } = data
-        const ariaLabel = `${title} - ${category} - Posted on ${date}`
+        const {
+          id,
+          // slug,
+          title,
+          instagram,
+          telegram,
+          twitter,
+          website,
+          wikipedia,
+          youtube,
+          desc,
+          date,
+          category,
+          alt,
+        } = data
+        // const ariaLabel = `${title} - ${category} - Posted on ${date}`
         return (
           <List key={id} role="listitem">
-              <Card
-                alt={alt}
-                category={category}
-                title={title}
-                instagram={instagram}
-                telegram={telegram}
-                twitter={twitter}
-                website={website}
-                wikipedia={wikipedia}
-                youtube={youtube}
-                desc={desc}
-                date={date}        
-              />
+            <Card
+              alt={alt}
+              category={category}
+              title={title}
+              instagram={instagram}
+              telegram={telegram}
+              twitter={twitter}
+              website={website}
+              wikipedia={wikipedia}
+              youtube={youtube}
+              desc={desc}
+              date={date}
+            />
           </List>
         )
       })}

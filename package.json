@@ -28,7 +28,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.1",
-    "dark-github-theme": "https://github.com/remorses/dark-github-theme.git",
+    "dark-github-theme": "git+https://github.com/remorses/dark-github-theme.git#3dde125a391f5557fcc42e0d95899750df4370bf",
     "gatsby": "^5.12.12",
     "gatsby-plugin-feed": "^5.12.3",
     "gatsby-plugin-image": "^3.12.3",
@@ -50,7 +50,7 @@
     "styled-components": "^6.1.1",
     "styled-reset": "^4.5.1",
     "typography": "^0.16.24",
-    "vscode-theme-github-light": "https://github.com/yunlingz/vscode-theme-github-light.git"
+    "vscode-theme-github-light": "git+https://github.com/yunlingz/vscode-theme-github-light.git#38174065a9e6c8d93a20fab5fe7c7641c07aeca7"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

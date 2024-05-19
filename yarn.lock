@@ -4150,7 +4150,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:*, @types/eslint@npm:^7.29.0":
+"@types/eslint@npm:*":
+  version: 8.56.10
+  resolution: "@types/eslint@npm:8.56.10"
+  dependencies:
+    "@types/estree": "npm:*"
+    "@types/json-schema": "npm:*"
+  checksum: 0cdd914b944ebba51c35827d3ef95bc3e16eb82b4c2741f6437fa57cdb00a4407c77f89c220afe9e4c9566982ec8a0fb9b97c956ac3bd4623a3b6af32eed8424
+  languageName: node
+  linkType: hard
+
+"@types/eslint@npm:^7.29.0":
   version: 7.29.0
   resolution: "@types/eslint@npm:7.29.0"
   dependencies:
@@ -4174,7 +4184,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/glob@npm:*, @types/glob@npm:^5.0.34":
+"@types/glob@npm:*":
+  version: 8.1.0
+  resolution: "@types/glob@npm:8.1.0"
+  dependencies:
+    "@types/minimatch": "npm:^5.1.2"
+    "@types/node": "npm:*"
+  checksum: 9101f3a9061e40137190f70626aa0e202369b5ec4012c3fabe6f5d229cce04772db9a94fa5a0eb39655e2e4ad105c38afbb4af56a56c0996a8c7d4fc72350e3d
+  languageName: node
+  linkType: hard
+
+"@types/glob@npm:^5.0.34":
   version: 5.0.38
   resolution: "@types/glob@npm:5.0.38"
   dependencies:
@@ -4258,7 +4278,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/minimatch@npm:*":
+"@types/minimatch@npm:*, @types/minimatch@npm:^5.1.2":
   version: 5.1.2
   resolution: "@types/minimatch@npm:5.1.2"
   checksum: 94db5060d20df2b80d77b74dd384df3115f01889b5b6c40fa2dfa27cfc03a68fb0ff7c1f2a0366070263eb2e9d6bfd8c87111d4bc3ae93c3f291297c1bf56c85
@@ -6748,14 +6768,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-name@npm:1.1.3, color-name@npm:^1.0.0":
+"color-name@npm:1.1.3":
   version: 1.1.3
   resolution: "color-name@npm:1.1.3"
   checksum: 09c5d3e33d2105850153b14466501f2bfb30324a2f76568a408763a3b7433b0e50e5b4ab1947868e65cb101bb7cb75029553f2c333b6d4b8138a73fcc133d69d
   languageName: node
   linkType: hard
 
-"color-name@npm:~1.1.4":
+"color-name@npm:^1.0.0, color-name@npm:~1.1.4":
   version: 1.1.4
   resolution: "color-name@npm:1.1.4"
   checksum: b0445859521eb4021cd0fb0cc1a75cecf67fceecae89b63f62b201cca8d345baf8b952c966862a9d9a2632987d4f6581f0ec8d957dfacece86f0a7919316f610
@@ -7511,9 +7531,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dark-github-theme@https://github.com/remorses/dark-github-theme.git":
+"dark-github-theme@git+https://github.com/remorses/dark-github-theme.git#3dde125a391f5557fcc42e0d95899750df4370bf":
   version: 1.0.1
-  resolution: "dark-github-theme@git+ssh://git@github.com/remorses/dark-github-theme.git#commit=3dde125a391f5557fcc42e0d95899750df4370bf"
+  resolution: "dark-github-theme@https://github.com/remorses/dark-github-theme.git#commit=3dde125a391f5557fcc42e0d95899750df4370bf"
   checksum: f3b427fda884ccb45577851e81c371718100390a0b4bf57ec09373b56e961e5f52d8c41db44663a732b59667f5491ced05d3f285fc7a2d5c8bdf3142288fb7bb
   languageName: node
   linkType: hard
@@ -10225,7 +10245,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^6.13.2"
     "@typescript-eslint/parser": "npm:^6.13.2"
     babel-plugin-styled-components: "npm:^2.1.4"
-    dark-github-theme: "https://github.com/remorses/dark-github-theme.git"
+    dark-github-theme: "git+https://github.com/remorses/dark-github-theme.git#3dde125a391f5557fcc42e0d95899750df4370bf"
     disable-scroll: "npm:^0.6.0"
     eslint: "npm:^8.55.0"
     eslint-config-prettier: "npm:^9.1.0"
@@ -10268,7 +10288,7 @@ __metadata:
     styled-reset: "npm:^4.5.1"
     typescript: "npm:^5.3.3"
     typography: "npm:^0.16.24"
-    vscode-theme-github-light: "https://github.com/yunlingz/vscode-theme-github-light.git"
+    vscode-theme-github-light: "git+https://github.com/yunlingz/vscode-theme-github-light.git#38174065a9e6c8d93a20fab5fe7c7641c07aeca7"
   languageName: unknown
   linkType: soft
 
@@ -14321,14 +14341,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.2, ms@npm:^2.1.1":
+"ms@npm:2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 673cdb2c3133eb050c745908d8ce632ed2c02d85640e2edb3ace856a2266a813b30c613569bf3354fdf4ea7d1a1494add3bfa95e2713baa27d0c2c71fc44f58f
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.3, ms@npm:^2.1.2":
+"ms@npm:2.1.3, ms@npm:^2.1.1, ms@npm:^2.1.2":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
@@ -16508,7 +16528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"raw-body@npm:2.5.1, raw-body@npm:^2.3.0":
+"raw-body@npm:2.5.1":
   version: 2.5.1
   resolution: "raw-body@npm:2.5.1"
   dependencies:
@@ -16520,7 +16540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"raw-body@npm:2.5.2":
+"raw-body@npm:2.5.2, raw-body@npm:^2.3.0":
   version: 2.5.2
   resolution: "raw-body@npm:2.5.2"
   dependencies:
@@ -17360,7 +17380,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:5.2.1, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.1":
+"safe-buffer@npm:5.2.1, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.1, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: 32872cd0ff68a3ddade7a7617b8f4c2ae8764d8b7d884c651b74457967a9e0e886267d3ecc781220629c44a865167b61c375d2da6c720c840ecd73f45d5d9451
@@ -18343,7 +18363,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string_decoder@npm:^1.1.1, string_decoder@npm:~1.1.1":
+"string_decoder@npm:^1.1.1":
+  version: 1.3.0
+  resolution: "string_decoder@npm:1.3.0"
+  dependencies:
+    safe-buffer: "npm:~5.2.0"
+  checksum: 54d23f4a6acae0e93f999a585e673be9e561b65cd4cca37714af1e893ab8cd8dfa52a9e4f58f48f87b4a44918d3a9254326cb80ed194bf2e4c226e2b21767e56
+  languageName: node
+  linkType: hard
+
+"string_decoder@npm:~1.1.1":
   version: 1.1.1
   resolution: "string_decoder@npm:1.1.1"
   dependencies:
@@ -19824,9 +19853,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vscode-theme-github-light@https://github.com/yunlingz/vscode-theme-github-light.git":
+"vscode-theme-github-light@git+https://github.com/yunlingz/vscode-theme-github-light.git#38174065a9e6c8d93a20fab5fe7c7641c07aeca7":
   version: 7.14.2
-  resolution: "vscode-theme-github-light@git+ssh://git@github.com/yunlingz/vscode-theme-github-light.git#commit=38174065a9e6c8d93a20fab5fe7c7641c07aeca7"
+  resolution: "vscode-theme-github-light@https://github.com/yunlingz/vscode-theme-github-light.git#commit=38174065a9e6c8d93a20fab5fe7c7641c07aeca7"
   checksum: 19fec7521e5529676180fc157fc5d367da8290933390bed15b6ebe70e1df25bcd064d88438119b693e0d94588d70e2230fdee40a59805efe4599128357ca61f9
   languageName: node
   linkType: hard

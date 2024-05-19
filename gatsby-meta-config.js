@@ -20,7 +20,7 @@ const metaConfig = {
   title: "دو اد",
   description: `بلاگ دو اد`,
   author: "اد",
-  siteUrl: "https://gatsby-starter-apple.netlify.app",
+  siteUrl: "https://keyvaann.github.io/blog",
   lang: "fa",
   utterances: "sungik-choi/gatsby-starter-apple-comment",
   links: {

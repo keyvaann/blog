@@ -6,7 +6,6 @@ import styled from "styled-components"
 import type Post from "~/src/types/Post"
 
 import Card from "./card"
-import { ThumbnailWrapper } from "./card/centeredImg"
 import useInfiniteScroll from "./useInfiniteScroll"
 
 interface PostGridProperties {
@@ -25,21 +24,23 @@ const PostGrid: React.FC<PostGridProperties> = ({ posts }) => {
   return (
     <Grid role="list">
       {currentList.map(data => {
-        const { id, slug, title, wiki, desc, date, category, thumbnail, alt } = data
+        const { id, slug, title, instagram, telegram, twitter, website, wikipedia, youtube, desc, date, category, alt } = data
         const ariaLabel = `${title} - ${category} - Posted on ${date}`
         return (
           <List key={id} role="listitem">
-            {/* <Link to={slug ?? ""} aria-label={ariaLabel}> */}
               <Card
-                thumbnail={thumbnail}
                 alt={alt}
                 category={category}
                 title={title}
-                wiki={wiki}
+                instagram={instagram}
+                telegram={telegram}
+                twitter={twitter}
+                website={website}
+                wikipedia={wikipedia}
+                youtube={youtube}
                 desc={desc}
-                date={date}
+                date={date}        
               />
-            {/* </Link> */}
           </List>
         )
       })}
@@ -67,14 +68,10 @@ const List = styled.li`
   box-sizing: border-box;
   grid-column: span 1;
 
-  a {
-    display: block;
-    height: 100%;
-  }
-
-  a:hover ${ThumbnailWrapper}::after, a:focus ${ThumbnailWrapper}::after {
-    opacity: 1;
-  }
+  // a {
+  //   display: block;
+  //   height: 100%;
+  // }
 
   & .gatsby-image-wrapper {
     transition:

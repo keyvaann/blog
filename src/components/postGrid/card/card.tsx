@@ -1,6 +1,17 @@
 import React from "react"
 
 import styled from "styled-components"
+import { Link } from "gatsby"
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faInstagram,
+  faTelegram,
+  faTwitter,
+  faWikipediaW,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 import Category from "~/src/styles/category"
 import DateTime from "~/src/styles/dateTime"
@@ -10,26 +21,34 @@ import CenteredImg from "./centeredImg"
 
 type CardProperties = Pick<
   Post,
-  "thumbnail" | "alt" | "category" | "title" | "desc" | "date" | "wiki"
+  "alt" | "category" | "title" | "instagram" | "telegram" | "twitter" | "website" | "wikipedia" | "youtube" | "desc" | "date"
 >
 
 const Card: React.FC<CardProperties> = ({
-  thumbnail,
   alt,
   category,
   title,
-  wiki,
+  instagram, 
+  telegram, 
+  twitter, 
+  website, 
+  wikipedia, 
+  youtube,
   desc,
   date,
 }) => {
   return (
     <Wrapper>
-      {/* <CenteredImg src={thumbnail} alt={alt} /> */}
       <Text>
         <div>
-          <Category>{category}</Category>
           <Title>{title}</Title>
-          <Wiki>{wiki}</Wiki>
+          {instagram && <LinkTo href={instagram} target="_blank"><FontAwesomeIcon icon={faInstagram} /></LinkTo> }
+          {telegram && <LinkTo href={telegram} target="_blank"><FontAwesomeIcon icon={faTelegram} /></LinkTo> }
+          {twitter && <LinkTo href={twitter} target="_blank"><FontAwesomeIcon icon={faTwitter} /></LinkTo> }
+          {website && <LinkTo href={website} target="_blank"><FontAwesomeIcon icon={faGlobe} /></LinkTo> }
+          {wikipedia && <LinkTo href={wikipedia} target="_blank"><FontAwesomeIcon icon={faWikipediaW} /></LinkTo> }
+          {youtube && <LinkTo href={youtube} target="_blank"><FontAwesomeIcon icon={faYoutube} /></LinkTo> }          
+          <Category>{category}</Category>
           <Desc>{desc}</Desc>
         </div>
         {/* <DateTime dateTime={date!}>{date}</DateTime> */}
@@ -53,10 +72,11 @@ const Wrapper = styled.div`
 
 const Text = styled.div`
   display: inline-block;
+  width: 100%;
   flex-direction: column;
   flex: 1 1 auto;
   justify-content: space-between;
-  // padding: var(--sizing-md);
+  padding: var(--sizing-base);
 
   & > * {
     display: block;
@@ -79,8 +99,8 @@ const Title = styled.h3`
   }
 `
 
-const Wiki = styled.a`
-  margin-top: var(--sizing-xs);
+const LinkTo = styled.a`
+  margin: var(--sizing-xs);
   // font-size: var(--text-lg);
   // font-weight: var(--font-weight-bold);
   line-height: 1.3;

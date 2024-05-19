@@ -22,6 +22,11 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.1",
     "dark-github-theme": "https://github.com/remorses/dark-github-theme.git",
     "gatsby": "^5.12.12",
     "gatsby-plugin-feed": "^5.12.3",

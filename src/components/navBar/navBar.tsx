@@ -131,7 +131,7 @@ const LinkUl = styled.ul<Toggleable>`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 32px;
+    margin-right: 32px;
   }
 
   li:first-child,

@@ -28,8 +28,8 @@ const Home = ({
     for (const { node } of filteredPostData) {
       const { id, fields, frontmatter } = node
       const { slug } = fields!
-      const { title, wiki, desc, date, category, thumbnail, alt } = frontmatter!
-      const { childImageSharp } = thumbnail!
+      const { title, instagram, telegram, twitter, website, wikipedia, youtube, desc, date, category, alt } = frontmatter!
+      // const { childImageSharp } = thumbnail!
 
       setPosts(previousPost => [
         ...previousPost,
@@ -37,11 +37,16 @@ const Home = ({
           id,
           slug,
           title,
+          instagram, 
+          telegram, 
+          twitter, 
+          website, 
+          wikipedia, 
+          youtube,
           desc,
           date,
           category,
-          wiki,
-          thumbnail: childImageSharp?.id,
+          // thumbnail: childImageSharp?.id,
           alt,
         },
       ])
@@ -99,7 +104,7 @@ const PostTitle = styled.h2`
 export const query = graphql`
   query Home {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
+      filter: { fileAbsolutePath: { regex: "/(posts/blog/.*)/" } }
       limit: 2000
       sort: { frontmatter: { date: DESC } }
     ) {
@@ -113,16 +118,15 @@ export const query = graphql`
           id
           frontmatter {
             title
-            wiki
+            instagram 
+            telegram 
+            twitter 
+            website
+            wikipedia 
+            youtube
             category
             date(formatString: "YYYY-MM-DD")
             desc
-            thumbnail {
-              childImageSharp {
-                id
-              }
-              base
-            }
             alt
           }
           fields {

@@ -7,7 +7,7 @@ import styled from "styled-components"
 import useScrollCenter from "./useScrollCenter"
 
 const ACTIVE = "active"
-const ALL_CATEGORY_NAME = "All"
+const ALL_CATEGORY_NAME = "همه"
 
 interface CategoryFilterProperties {
   categoryList: readonly Queries.MarkdownRemarkGroupConnection[]
@@ -31,7 +31,7 @@ const CategoryFilter: React.FC<CategoryFilterProperties> = ({
 
   return (
     <Nav aria-label="Category Filter">
-      <CategoryTitle>Category</CategoryTitle>
+      <CategoryTitle>گروه</CategoryTitle>
       <CategoryButton getProps={isActive} to="/">
         {ALL_CATEGORY_NAME}
       </CategoryButton>
@@ -84,7 +84,7 @@ const CategoryTitle = styled.em`
   font-size: var(--text-base);
   font-weight: var(--font-weight-semi-bold);
   font-style: initial;
-  margin-right: var(--sizing-lg);
+  margin-left: var(--sizing-lg);
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     position: absolute;
@@ -136,7 +136,7 @@ const CategoryUl = styled.ul`
   scrollbar-width: none;
 
   li + li {
-    margin-left: 6px;
+    margin-right: 6px;
   }
 `
 

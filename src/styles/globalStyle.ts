@@ -138,6 +138,8 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--color-post-background);
     -webkit-font-smoothing: antialiased;
 
+    direction: rtl;
+
     * {
       color: var(--color-text);
     }

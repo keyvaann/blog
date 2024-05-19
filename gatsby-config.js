@@ -9,19 +9,19 @@ const siteMetadata = {
   utterances: {
     repo: meta.utterances,
   },
-  postTitle: "All",
+  postTitle: "همه",
   menuLinks: [
     {
       link: "/",
-      name: "Home",
+      name: "خانه",
     },
     {
       link: "/about/",
-      name: "About",
+      name: "درباره",
     },
     {
       link: meta.links.github,
-      name: "Github",
+      name: "گیت‌هاب",
     },
   ],
 }
@@ -134,7 +134,7 @@ const searchPlugins = [
           query: `
             {
               allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
+                filter: { fileAbsolutePath: { regex: "/(posts/blog/.*)/" } }
                 sort: { frontmatter: { date: DESC } }
               ) {
                 edges {

@@ -34,7 +34,7 @@ const BlogPost: React.FC<PageProps<Queries.Query>> = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} desc={desc} image={ogImagePath} />
+      <SEO title={title} desc={desc} />
       <main>
         <article>
           <OuterWrapper>

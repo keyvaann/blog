@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet"
 
 import useSiteMetadata from "~/src/hooks/useSiteMetadata"
 
-import defaultOpenGraphImage from "../images/og-default.png"
+// import defaultOpenGraphImage from "../images/og-default.png"
 
-const DEFAULT_LANG = "en"
+const DEFAULT_LANG = "fa"
 
 type Meta = React.DetailedHTMLProps<
   React.MetaHTMLAttributes<HTMLMetaElement>,
@@ -16,15 +16,15 @@ type Meta = React.DetailedHTMLProps<
 interface SEOProperties
   extends Pick<Queries.MarkdownRemarkFrontmatter, "title"> {
   desc?: Queries.Maybe<string>
-  image?: Queries.Maybe<string>
+  // image?: Queries.Maybe<string>
   meta?: Meta
 }
 
-const SEO: React.FC<SEOProperties> = ({ title, desc = "", image }) => {
+const SEO: React.FC<SEOProperties> = ({ title, desc = "" }) => {
   const site = useSiteMetadata()
   const description = desc || site.description
-  const ogImageUrl =
-    site.siteUrl ?? "" + (image || (defaultOpenGraphImage as string))
+  // const ogImageUrl =
+  //   site.siteUrl ?? "" + (image || (defaultOpenGraphImage as string))
 
   return (
     <Helmet
@@ -65,18 +65,18 @@ const SEO: React.FC<SEOProperties> = ({ title, desc = "", image }) => {
             name: "twitter:description",
             content: description,
           },
-          {
-            property: "image",
-            content: ogImageUrl,
-          },
-          {
-            property: "og:image",
-            content: ogImageUrl,
-          },
-          {
-            property: "twitter:image",
-            content: ogImageUrl,
-          },
+          // {
+          //   property: "image",
+          //   content: ogImageUrl,
+          // },
+          // {
+          //   property: "og:image",
+          //   content: ogImageUrl,
+          // },
+          // {
+          //   property: "twitter:image",
+          //   content: ogImageUrl,
+          // },
         ] as Meta
       }
     />

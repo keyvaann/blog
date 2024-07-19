@@ -1,4 +1,5 @@
 const path = require(`path`)
+const meta = require("./gatsby-meta-config")
 const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -48,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   posts.forEach(({ node }) => {
     createPage({
-      path: node.fields.slug,
+      path: meta.basePath + node.fields.slug,
       component: blogPostTemplate,
       context: {
         slug: node.fields.slug,
@@ -60,7 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   categories.forEach(category => {
     createPage({
-      path: `/category/${_.kebabCase(category.fieldValue)}/`,
+      path: `${meta.basePath}/category/${_.kebabCase(category.fieldValue)}/`,
       component: mainTemplate,
       context: {
         category: category.fieldValue,

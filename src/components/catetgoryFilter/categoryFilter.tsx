@@ -4,6 +4,8 @@ import { type GatsbyLinkProps, Link } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
 
+import meta from "../../../gatsby-meta-config"
+
 import useScrollCenter from "./useScrollCenter"
 
 const ACTIVE = "active"
@@ -43,7 +45,7 @@ const CategoryFilter: React.FC<CategoryFilterProperties> = ({
             <li key={fieldValue}>
               <CategoryButton
                 getProps={isActive}
-                to={`/category/${kebabCase(fieldValue!)}/`}
+                to={`${meta.basePath}/category/${kebabCase(fieldValue!)}/`}
               >
                 {fieldValue}
               </CategoryButton>

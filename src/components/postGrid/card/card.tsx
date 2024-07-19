@@ -3,8 +3,12 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import {
+  faFacebook,
+  faImdb,
   faInstagram,
+  faLinkedin,
   faTelegram,
+  faTiktok,
   faTwitter,
   faWikipediaW,
   faYoutube,
@@ -23,12 +27,17 @@ type CardProperties = Pick<
   Post,
   | "alt"
   | "category"
+  | "subcategory"
   | "title"
   | "instagram"
   | "telegram"
   | "twitter"
   | "website"
   | "wikipedia"
+  | "imdb"
+  | "linkedin"
+  | "facebook"
+  | "tiktok"
   | "youtube"
   | "desc"
   | "date"
@@ -37,12 +46,17 @@ type CardProperties = Pick<
 const Card: React.FC<CardProperties> = ({
   // alt,
   category,
+  subcategory,
   title,
   instagram,
   telegram,
   twitter,
   website,
   wikipedia,
+  imdb,
+  linkedin,
+  facebook,
+  tiktok,
   youtube,
   desc,
   // date,
@@ -77,11 +91,32 @@ const Card: React.FC<CardProperties> = ({
               <FontAwesomeIcon icon={faWikipediaW} />
             </LinkTo>
           )}
+          {imdb && (
+            <LinkTo href={imdb} target="_blank">
+              <FontAwesomeIcon icon={faImdb} />
+            </LinkTo>
+          )}
+          {linkedin && (
+            <LinkTo href={linkedin} target="_blank">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </LinkTo>
+          )}
+          {facebook && (
+            <LinkTo href={facebook} target="_blank">
+              <FontAwesomeIcon icon={faFacebook} />
+            </LinkTo>
+          )}
+          {tiktok && (
+            <LinkTo href={tiktok} target="_blank">
+              <FontAwesomeIcon icon={faTiktok} />
+            </LinkTo>
+          )}
           {youtube && (
             <LinkTo href={youtube} target="_blank">
               <FontAwesomeIcon icon={faYoutube} />
             </LinkTo>
           )}
+          {subcategory && <Category> ، {subcategory}</Category>}
           <Category>{category}</Category>
           <Desc>{desc}</Desc>
         </div>

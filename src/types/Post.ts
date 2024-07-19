@@ -7,10 +7,15 @@ export default interface Post
     | "twitter"
     | "website"
     | "wikipedia"
+    | "imdb"
+    | "linkedin"
+    | "facebook"
+    | "tiktok"
     | "youtube"
     | "desc"
     | "date"
     | "category"
+    | "subcategory"
     | "alt"
   > {
   id: string

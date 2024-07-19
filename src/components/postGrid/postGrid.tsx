@@ -33,10 +33,15 @@ const PostGrid: React.FC<PostGridProperties> = ({ posts }) => {
           twitter,
           website,
           wikipedia,
+          imdb,
+          linkedin,
+          facebook,
+          tiktok,
           youtube,
           desc,
           date,
           category,
+          subcategory,
           alt,
         } = data
         // const ariaLabel = `${title} - ${category} - Posted on ${date}`
@@ -45,12 +50,17 @@ const PostGrid: React.FC<PostGridProperties> = ({ posts }) => {
             <Card
               alt={alt}
               category={category}
+              subcategory={subcategory}
               title={title}
               instagram={instagram}
               telegram={telegram}
               twitter={twitter}
               website={website}
               wikipedia={wikipedia}
+              imdb={imdb}
+              linkedin={linkedin}
+              facebook={facebook}
+              tiktok={tiktok}
               youtube={youtube}
               desc={desc}
               date={date}

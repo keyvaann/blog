@@ -35,10 +35,15 @@ const Home = ({
         twitter,
         website,
         wikipedia,
+        imdb,
+        linkedin,
+        facebook,
+        tiktok,
         youtube,
         desc,
         date,
         category,
+        subcategory,
         alt,
       } = frontmatter!
       // const { childImageSharp } = thumbnail!
@@ -54,10 +59,15 @@ const Home = ({
           twitter,
           website,
           wikipedia,
+          imdb,
+          linkedin,
+          facebook,
+          tiktok,
           youtube,
           desc,
           date,
           category,
+          subcategory,
           // thumbnail: childImageSharp?.id,
           alt,
         },
@@ -135,8 +145,13 @@ export const query = graphql`
             twitter
             website
             wikipedia
+            imdb
+            linkedin
+            facebook
+            tiktok
             youtube
             category
+            subcategory
             date(formatString: "YYYY-MM-DD")
             desc
             alt

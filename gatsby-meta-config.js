@@ -21,6 +21,7 @@ const metaConfig = {
   description: `بلاگ دو اد`,
   author: "اد",
   siteUrl: "https://keyvaann.github.io/blog",
+  basePath: "/blog",
   lang: "fa",
   utterances: "sungik-choi/gatsby-starter-apple-comment",
   links: {

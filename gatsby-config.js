@@ -5,6 +5,7 @@ const siteMetadata = {
   description: meta.description,
   author: meta.author,
   siteUrl: meta.siteUrl,
+  basePath: meta.basePath,
   lang: meta.lang,
   utterances: {
     repo: meta.utterances,
@@ -12,11 +13,11 @@ const siteMetadata = {
   postTitle: "همه",
   menuLinks: [
     {
-      link: "/",
+      link: `${meta.basePath}/`,
       name: "خانه",
     },
     {
-      link: "/about/",
+      link: `${meta.basePath}/about/`,
       name: "درباره",
     },
     {
@@ -113,6 +114,7 @@ const searchPlugins = [
               title
               description
               siteUrl
+              basePath
               site_url: siteUrl
             }
           }
@@ -125,8 +127,14 @@ const searchPlugins = [
               return Object.assign({}, edge.node.frontmatter, {
                 description: edge.node.excerpt,
                 date: edge.node.frontmatter.date,
-                url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                url:
+                  site.siteMetadata.siteUrl +
+                  site.siteMetadata.basePath +
+                  edge.node.fields.slug,
+                guid:
+                  site.siteMetadata.siteUrl +
+                  site.siteMetadata.basePath +
+                  edge.node.fields.slug,
                 custom_elements: [{ "content:encoded": edge.node.html }],
               })
             })
@@ -151,7 +159,7 @@ const searchPlugins = [
               }
             }
           `,
-          output: "/rss.xml",
+          output: `${meta.basePath}/rss.xml`,
           title: `${meta.title}'s RSS Feed`,
         },
       ],
@@ -167,7 +175,7 @@ const pwaPlugins = [
       short_name: meta.title,
       description: meta.description,
       lang: meta.lang,
-      start_url: "/",
+      start_url: meta.basePath,
       background_color: "#ffffff",
       theme_color: "#ffffff",
       display: "standalone",

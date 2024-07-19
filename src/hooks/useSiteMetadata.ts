@@ -15,6 +15,7 @@ const useSiteMetadata = () => {
           description
           author
           siteUrl
+          basePath
           lang
           utterances {
             repo

@@ -3,6 +3,7 @@ import React, { useContext, useRef } from "react"
 import { Link } from "gatsby"
 import styled, { ThemeContext } from "styled-components"
 
+import meta from "~/gatsby-meta-config"
 import useSiteMetadata from "~/src/hooks/useSiteMetadata"
 import type { UseThemeReturnType } from "~/src/hooks/useTheme"
 import Background from "~/src/styles/background"
@@ -41,7 +42,7 @@ const NavBar: React.FC<NavBarProperties> = ({ title, themeToggler }) => {
       <NavBackground toggle={toggle} />
       <Content>
         <Title onClick={() => setToggle(false)}>
-          <Link to="/">{title}</Link>
+          <Link to={meta.basePath}>{title}</Link>
         </Title>
         <LinkWrap>
           <Curtain ref={curtainReference} toggle={toggle} />

@@ -4,7 +4,7 @@ import { type GatsbyLinkProps, Link } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
 
-import meta from "../../../gatsby-meta-config"
+import meta from "~/gatsby-meta-config"
 
 import useScrollCenter from "./useScrollCenter"
 
